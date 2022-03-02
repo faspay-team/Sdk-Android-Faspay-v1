@@ -85,6 +85,7 @@ public class FaspayPaymentRequestWrapper extends FaspayPaymentRequest {
         setReserve1("");
         
         setReserve2("");
+        setTrxsource();
         setRequest("");
         setPayType(String.valueOf(billing.getPay_type()));
         String userAndPass = new StringBuilder(mFaspayConfig.getFaspayUser().getUserId()).append(mFaspayConfig.getFaspayUser().getPassword()).append(getBillNo()).toString();
