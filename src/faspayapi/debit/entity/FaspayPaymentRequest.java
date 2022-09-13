@@ -68,6 +68,7 @@ import faspayapi.debit.FaspayConfigDebit;
     "item",
     "reserve1",
     "reserve2",
+    "trx_source",
     "signature"
 })
 public class FaspayPaymentRequest {
@@ -156,6 +157,8 @@ public class FaspayPaymentRequest {
     private String reserve1;
     @JsonProperty("reserve2")
     private String reserve2;
+    @JsonProperty("trx_source")
+    private String trx_source;
     @JsonProperty("signature")
     private String signature;
     @JsonIgnore
@@ -583,6 +586,16 @@ public class FaspayPaymentRequest {
     @JsonProperty("reserve2")
     public void setReserve2(String reserve2) {
         this.reserve2 = reserve2;
+    }
+
+    @JsonProperty("trx_source")
+    public String getTrxsource() {
+        return trx_source;
+    }
+
+    @JsonProperty("trx_source")
+    public void setTrxsource() {
+        this.trx_source = "Android SDK";
     }
 
     @JsonProperty("signature")
